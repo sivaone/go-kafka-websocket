@@ -56,7 +56,7 @@ func handleNotifications(c *gin.Context) {
 
 func main() {
 	router := gin.Default()
-	router.GET("/wsnotif", handleNotifications)
+	router.GET("/notif", handleNotifications)
 
 	router.Run("localhost:8080")
 }

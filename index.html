@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Go Websockets</title>
+</head>
+<body>
+    <script>
+        let socket = new WebSocket("ws://localhost:8080/notif");
+        console.log("Starting webscoket connection");
+
+        socket.onopen = () => {
+            console.log("connected");
+        }
+
+        socket.onmessage = (message) => {
+            console.log("message: ", message);
+        }
+
+        socket.onclose = (event) => {
+            console.log("connection closed");
+        }
+
+        socket.onerror = (error) => {
+            console.log("error: ", error);
+        }
+    </script>
+</body>
+</html>
